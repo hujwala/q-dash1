@@ -1,0 +1,38 @@
+ <div class="row">
+    <div class="col-sm-offset-2 col-sm-10">
+    <%= form_for([:admin, @dashboard], :html => {:id=>"form_dashboard", :remote=>true}) do |f| %>
+ <div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">New Dashboard</h3>
+  </div>
+  <div class="panel-body" style="height:auto;">
+    <div id="dashboard_form_error">
+      <%= @dashboard.errors[:base].to_sentence %>
+    </div>
+    <div class="form-group">
+      <label for="inputName" class="col-sm-3 control-label">Name *</label>
+      <div class="col-sm-9">
+        <%= f.text_field :name, :class=>"form-control", :id=>"inputName", :placeholder=>"Name" %>
+        <% if @dashboard.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+      <% @dashboard.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+    <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="panel-footer text-right">
+    <%= link_to "Cancel", admin_dashboards_path, :class => "btn btn-default", remote: true %>
+    <!-- Button trigger modal -->
+    <%= f.submit "OK", :class => "btn btn-primary" %>
+
+  </div>
+  <!-- </div> -->
+  <% end %>
+  </div>
+  </div>
+  </div>

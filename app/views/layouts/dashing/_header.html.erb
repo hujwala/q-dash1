@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="navbar-header">
+    <button data-target=".bs-navbar-collapse" data-toggle="collapse" type="button" class="navbar-toggle collapsed">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <div id="logo">
+      <a class="navbar-brand" > </a>
+    </div>
+
+  </div>
+  <nav class="collapse navbar-collapse bs-navbar-collapse">
+    <ul class="nav navbar-nav">
+      <!-- navbar lists -->
+      <li>
+        <% if current_page?(admin_dashboards_path) %>
+        <%= link_to  admin_dashboards_path,:class=>"border-left border-right",  :class=>"active" do %>
+        <i class="fa fa-tachometer header-icons"></i><br />
+        manage dashboard
+        <% end %>
+        <% else %>
+        <%= link_to  admin_dashboards_path,:class=>"border-left border-right" do %>
+        <i class="fa fa-tachometer header-icons"></i><br />
+        manage dashboard
+        <% end %>
+        <% end %>
+      </li>
+      <li>
+        <% if current_page?(admin_users_path) %>
+        <%= link_to  admin_users_path, :class =>"border-right active" do %>
+        <i class="fa fa-cogs header-icons"></i> <br />
+        manage users
+        <% end %>
+        <% else %>
+        <%= link_to  admin_users_path, :class =>"border-right" do %>
+        <i class="fa fa-cogs header-icons"></i> <br />
+        manage users
+        <% end %>
+        <% end %>
+      </li>
+      <li>
+        <% if current_page?(admin_hrs_path) %>
+        <%= link_to    admin_hrs_path, :class =>"border-right active" do %>
+        <i class="fa fa-cogs header-icons"></i> <br />
+        hr
+        <% end %>
+        <% else %>
+        <%= link_to  admin_hrs_path, :class =>"border-right" do %>
+        <i class="fa fa-cogs header-icons"></i> <br />
+        hr
+        <% end %>
+        <% end %>
+      </li>
+    </ul>
+    <!-- user dropdown -->
+    <ul class="nav navbar-nav navbar-right">
+     
+        </li>
+        <li style="margin-top: 25px;"><%= link_to "Sign Out", admin_session_path(current_user), method: :delete %></li>
+      </ul>
+    </nav>
+  </div>

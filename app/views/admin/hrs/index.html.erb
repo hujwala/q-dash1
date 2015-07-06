@@ -1,0 +1,251 @@
+<div class="page-title">
+	HR
+</div>
+<div id="div_flash_message">
+	<%= render :partial=>"/layouts/dashing/flash_messages" -%>
+</div>
+<div class="container">
+	<div id="div_wallboard_button">
+		<div class="text-right dash-btn-group" id="lnkdb">
+			<%= link_to 'Wallboard', "#", target:"_blank" %>
+		</div>  
+	</div>
+	<div class="row dashboard_index">
+		<div id="div_dashboard_index" class="col-sm-6 hidden-xs">
+			<%#= render :partial=>"index" %>
+		</div>
+		<div id="div_dashboard_show" class="col-xs-12 col-sm-6">
+			<%#= render :partial=>"show", locals: {:dashboard => @dashboard } %>
+		</div>
+	</div>
+</div>
+	<div class="container">
+		<div class="row">
+			<div class="dropdown check1">
+				<button class="btn btn-default dropdown-toggle btn-default " type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					Company updates
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu " aria-labelledby="dropdownMenu1">
+					<div class="col-lg-6">
+						<%= form_for :hrs do |f| %>
+						<div class="from-group form1 form-control1">
+							<label>Title</label>
+							<%= f.text_field :name2, :class=>"form-control" %>
+						</div>
+						<div class="from-group form-control1">
+							<label>Description</label>
+							<%= f.text_area :description2, :class=>"form-control"%>
+						</div>
+						<%= f.submit %>
+						<% end %>
+
+					</div>
+				</ul>
+			</div>
+			<div class="dropdown check1 ">
+				<button class="btn btn-default dropdown-toggle btn-default" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					Birthday
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu " aria-labelledby="dropdownMenu1">
+					<div class="col-lg-6">
+						<%= form_for :birthdays, :url => { :controller => :birthdays, :action => :create } do |f| %>
+						<div class="from-group form-control1">
+							<label>Name</label>
+							<%= f.text_field :birthday_name, :class=>"form-control" %>
+						</div>
+						<%= f.submit %>
+						<% end %>
+					</div>
+				</ul>
+			</div>
+
+			<div class="dropdown check1">
+				<button class="btn btn-default dropdown-toggle btn-default" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					Events
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu " aria-labelledby="dropdownMenu1">
+					<div class="col-lg-6">
+						<%= form_for :events, :url => { :controller => :events, :action => :create } do |f| %>
+						<div class="from-group form-control1">
+							<label>Event Name</label>
+							<%= f.text_field :event_name, :class=>"form-control" %>
+						</div>
+						<div class="from-group form-control1">
+							<label>Description</label>
+							<%= f.text_field :event_description, :class=>"form-control" %>
+						</div>
+						<%= f.submit %>
+						<% end %>
+					</div>
+				</ul>
+			</div>
+			<div class="dropdown check1">
+				<button class="btn btn-default dropdown-toggle btn-default" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					Achievements
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu " aria-labelledby="dropdownMenu1">
+					<div class="col-lg-6">
+						<%= form_for :achievements, :url => { :controller => :achievements, :action => :create } do |f| %>
+						<div class="from-group form-control1">
+							<label>Name</label>
+							<%= f.text_field :ach_name, :class=>"form-control" %>
+						</div>
+						<div class="from-group form-control1">
+							<label>Description</label>
+							<%= f.text_field :ach_description, :class=>"form-control" %>
+						</div>
+						<%= f.submit %>
+						<% end %>
+					</div>
+				</ul>
+			</div>
+
+			<div class="dropdown check1">
+				<button class="btn btn-default dropdown-toggle btn-default" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					General Announcement
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu " aria-labelledby="dropdownMenu1">
+					<div class="col-lg-6">
+						<%= form_for :generals, :url => { :controller => :generals, :action => :create } do |f| %>
+						<div class="from-group form-control1">
+							<label>Name</label>
+							<%= f.text_field :general_name, :class=>"form-control" %>
+						</div>
+						<div class="from-group form-control1">
+							<label>Description</label>
+							<%= f.text_field :general_description, :class=>"form-control" %>
+						</div>
+						<%= f.submit %>
+						<% end %>
+					</div>
+				</ul>
+			</div>
+
+			<div class="dropdown check1">
+				<button class="btn btn-default dropdown-toggle btn-default" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					Joining Anniversary
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu " aria-labelledby="dropdownMenu1">
+					<div class="col-lg-6">
+						<%= form_for :anniversaries, :url => { :controller => :anniversarrys, :action => :create } do |f| %>
+						<div class="from-group form-control1 ">
+							<label>Name</label>
+							<%= f.text_field :ann_name, :class=>"form-control" %>
+						</div>
+						<div class="from-groupform-control1">
+							<label>Year</label>
+							<%= f.text_field :ann_year, :class=>"form-control" %>
+						</div>
+						<div class="from-group form-control1">
+							<label>Wish Note</label>
+							<%= f.text_field :ann_wish, :class=>"form-control" %>
+						</div>
+						<%= f.submit %>
+						<% end %>
+					</div>
+				</ul>
+			</div>
+			<div class="dropdown check1 ">
+				<button class="btn btn-default dropdown-toggle btn-default" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					New Joiners
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu " aria-labelledby="dropdownMenu1">
+					<div class="col-lg-6">
+						<%= form_for :newjoiners, :url => { :controller => :newjoiners, :action => :create } do |f| %>
+						<div class="from-group form-control1 ">
+							<label>Name</label>
+							<%= f.text_field :new_name, :class=>"form-control" %>
+						</div>
+						<div class="from-group form-control1">
+							<label>Other Info</label>
+							<%= f.text_field :new_info, :class=>"form-control" %>
+						</div>
+						<%= f.submit %>
+						<% end %>
+					</div>
+				</ul>
+			</div>
+
+
+			
+			
+		</br>
+	</div>
+	<div class="col-lg-6 cb-selection  check ">
+		<h3> Select widgets </h3>
+		<div class="from-group ">
+			<div class="checkbox span5 well padding">
+				<label>
+					<h4><input type="checkbox" id="cu"> COMPANY UPDATES</h4>
+				</label>
+			</div>
+		</div>
+		<div class="from-group ">
+			<div class="checkbox span5 well padding">
+				<label>
+					<h4><input type="checkbox" id="br"> BIRTHDAY</h4>
+				</label>
+			</div>
+		</div>
+
+
+		<div class="from-group ">
+			<div class="checkbox span5 well padding">
+				<label>
+					<h4><input type="checkbox" id="ev"> Events</h4>
+				</label>
+			</div>
+		</div>
+<div class="from-group ">
+			<div class="checkbox span5 well padding">
+				<label>
+					<h4><input type="checkbox" id="ach"> </h4>Achievements </label>
+			</div>
+		</div>
+
+
+		<div class="from-group ">
+			<div class="checkbox span5 well padding">
+				<label>
+					<h4><input type="checkbox" id="gn"> General Announcement</h4>
+				</label>
+			</div>
+		</div>
+		<div class="from-group ">
+			<div class="checkbox span5 well padding">
+				<label>
+					<h4><input type="checkbox" id="ann"> </h4> Joining Anniversary</label>
+			</div>
+		</div>
+
+
+		<div class="from-group ">
+			<div class="checkbox span5 well padding ">
+				<label>
+					<h4><input type="checkbox" id="nw"> New Joiners</h4>
+				</label>
+			</div>
+		</div>
+		
+
+	</div>
+</div>
+</div>
+<script type="text/javascript">
+	$(document).on("change",".cb-selection input[type='checkbox']", function(){
+		var _url="";
+		$(".cb-selection input[type='checkbox']").each(function(_index, _ele){
+			if( $(_ele).prop("checked") )
+				_url += "|"+$(_ele).attr("id") 		
+		});
+		_url = _url.substring(1);
+		$("#lnkdb a").attr("href", "/admin/hrs/1/dashing/?w="+_url);
+	});
+</script>

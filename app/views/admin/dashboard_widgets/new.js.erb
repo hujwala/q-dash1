@@ -1,0 +1,254 @@
+// heading = "Add Widgets";
+// bodyContent = "<%#= escape_javascript(render(:partial=>'form')) %>";
+// showModal(heading, bodyContent);
+
+$('#myModal').html("<%= escape_javascript(render(:partial=>'form')) %>");
+$('#myModal').modal('show');
+
+$("#git").click(function(){
+
+  $("#git").addClass("selected");
+  $("#jira").removeClass("selected");
+  $("#code").removeClass("selected");
+  $("#jenkins").removeClass("selected");
+  $("#newrelic").removeClass("selected");
+    $("#sonar").removeClass("selected");
+    $("#rally").removeClass("selected");
+    $("#rally1").removeClass("selected");
+    $("#rally2").removeClass("selected");
+
+
+
+  $('#git-widget').show();
+ $('#jira-widget').hide();
+  $('#code-widget').hide();
+  $('#jenkins-widget').hide();
+  $('#newrelic-widget').hide();
+  $('#sonar-widget').hide();
+$('#rally-widget').hide();
+$('#rally1-widget').hide();
+$('#rally2-widget').hide();
+
+
+});
+$("#jira").click(function(){
+
+  $("#jira").addClass("selected");
+  $("#git").removeClass("selected");
+  $("#code").removeClass("selected");
+  $("#jenkins").removeClass("selected");
+  $("#newrelic").removeClass("selected");
+  $("#sonar").removeClass("selected");
+  $("#rally").removeClass("selected");
+    $("#rally1").removeClass("selected");
+    $("#rally2").removeClass("selected");
+
+
+
+
+  $('#git-widget').hide();
+  $('#jira-widget').show();
+  $('#code-widget').hide();
+  $('#jenkins-widget').hide();
+  $('#newrelic-widget').hide();
+  $('#sonar-widget').hide();
+$('#rally-widget').hide();
+$('#rally1-widget').hide();
+$('#rally2-widget').hide();
+
+
+});
+$("#code").click(function(){
+
+  $("#code").addClass("selected");
+  $("#jira").removeClass("selected");
+  $("#git").removeClass("selected");
+  $("#jenkins").removeClass("selected");
+  $("#newrelic").removeClass("selected");
+  $("#sonar").removeClass("selected");
+  $("#rally").removeClass("selected");
+    $("#rally1").removeClass("selected");
+    $("#rally2").removeClass("selected");
+
+
+
+
+  $('#git-widget').hide();
+  $('#jira-widget').hide();
+  $('#code-widget').show();
+  $('#jenkins-widget').hide();
+  $('#newrelic-widget').hide();
+
+  $('#sonar-widget').hide();
+
+$('#rally-widget').hide();
+$('#rally1-widget').hide();
+$('#rally2-widget').hide();
+
+});
+$("#jenkins").click(function(){
+
+  $("#jenkins").addClass("selected");
+  $("#jira").removeClass("selected");
+  $("#git").removeClass("selected");
+  $("#code").removeClass("selected");
+  $("#newrelic").removeClass("selected");
+  $("#sonar").removeClass("selected");
+  $("#rally").removeClass("selected");
+    $("#rally1").removeClass("selected");
+    $("#rally2").removeClass("selected");
+
+
+
+
+
+  $('#git-widget').hide();
+  $('#jira-widget').hide();
+  $('#code-widget').hide();
+  $('#jenkins-widget').show();
+  $('#newrelic-widget').hide();
+
+  $('#sonar-widget').hide();
+
+$('#rally-widget').hide();
+$('#rally1-widget').hide();
+$('#rally2-widget').hide();
+
+});
+$("#newrelic").click(function(){
+
+  $("#jenkins").removeClass("selected");
+  $("#jira").removeClass("selected");
+  $("#git").removeClass("selected");
+  $("#code").removeClass("selected");
+  $("#newrelic").addClass("selected");
+  $("#sonar").removeClass("selected");
+  $("#rally").removeClass("selected");
+    $("#rally1").removeClass("selected");
+    $("#rally2").removeClass("selected");
+
+
+
+  $('#git-widget').hide();
+  $('#jira-widget').hide();
+  $('#code-widget').hide();
+  $('#jenkins-widget').hide();
+  $('#newrelic-widget').show();
+  $('#sonar-widget').hide();
+
+$('#rally-widget').hide();
+$('#rally1-widget').hide();
+$('#rally2-widget').hide();
+
+
+});
+
+
+
+
+$("#sonar").click(function(){
+
+  $("#jenkins").removeClass("selected");
+  $("#jira").removeClass("selected");
+  $("#git").removeClass("selected");
+  $("#code").removeClass("selected");
+  $("#newrelic").removeClass("selected");
+  $("#sonar").addClass("selected");
+ $("#rally").removeClass("selected");
+    $("#rally1").removeClass("selected");
+    $("#rally2").removeClass("selected");
+
+
+
+  $('#git-widget').hide();
+  $('#jira-widget').hide();
+  $('#code-widget').hide();
+  $('#jenkins-widget').hide();
+  $('#newrelic-widget').hide();
+  $('#sonar-widget').show();
+$('#rally-widget').hide();
+$('#rally1-widget').hide();
+$('#rally2-widget').hide();
+
+
+});
+$("#rally").click(function(){
+
+  $("#jenkins").removeClass("selected");
+  $("#jira").removeClass("selected");
+  $("#git").removeClass("selected");
+  $("#code").removeClass("selected");
+  $("#newrelic").removeClass("selected");
+  $("#sonar").removeClass("selected");
+  $("#rally").addClass("selected");
+    $("#rally1").removeClass("selected");
+    $("#rally2").removeClass("selected");
+
+
+  $('#git-widget').hide();
+  $('#jira-widget').hide();
+  $('#code-widget').hide();
+  $('#jenkins-widget').hide();
+  $('#newrelic-widget').hide();
+  $('#sonar-widget').hide();
+$('#rally-widget').show();
+$('#rally1-widget').hide();
+$('#rally2-widget').hide();
+
+
+});
+$("#rally1").click(function(){
+
+  $("#jenkins").removeClass("selected");
+  $("#jira").removeClass("selected");
+  $("#git").removeClass("selected");
+  $("#code").removeClass("selected");
+  $("#newrelic").removeClass("selected");
+  $("#sonar").removeClass("selected");
+  $("#rally").removeClass("selected");
+    $("#rally1").addClass("selected");
+    $("#rally2").removeClass("selected");
+
+
+
+  $('#git-widget').hide();
+  $('#jira-widget').hide();
+  $('#code-widget').hide();
+  $('#jenkins-widget').hide();
+  $('#newrelic-widget').hide();
+  $('#sonar-widget').hide();
+$('#rally-widget').hide();
+$('#rally1-widget').show();
+$('#rally2-widget').hide();
+
+
+});
+$("#rally2").click(function(){
+
+  $("#jenkins").removeClass("selected");
+  $("#jira").removeClass("selected");
+  $("#git").removeClass("selected");
+  $("#code").removeClass("selected");
+  $("#newrelic").removeClass("selected");
+  $("#sonar").removeClass("selected");
+  $("#rally").removeClass("selected");
+    $("#rally1").removeClass("selected");
+    $("#rally2").addClass("selected");
+
+
+  $('#git-widget').hide();
+  $('#jira-widget').hide();
+  $('#code-widget').hide();
+  $('#jenkins-widget').hide();
+  $('#newrelic-widget').hide();
+  $('#sonar-widget').hide();
+
+$('#rally-widget').hide();
+$('#rally1-widget').hide();
+$('#rally2-widget').show();
+
+
+});
+
+
+

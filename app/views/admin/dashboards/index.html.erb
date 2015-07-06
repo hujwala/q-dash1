@@ -1,0 +1,29 @@
+<div class="page-title">
+  Manage Dashboards
+</div>
+<div id="div_flash_message">
+    <%= render :partial=>"/layouts/dashing/flash_messages" -%>
+</div>
+<div class="container">
+<div id="div_wallboard_button">
+    <%= render :partial=>"wallboard_button" %>
+  </div>
+<% if @dashboards.present? %>
+<div class="row dashboard_index">
+  <div id="div_dashboard_index" class="col-sm-6 hidden-xs">
+    <%= render :partial=>"index" %>
+  </div>
+  <div id="div_dashboard_show" class="col-xs-12 col-sm-6">
+    <%= render :partial=>"show", locals: {:dashboard => @dashboard } %>
+  </div>
+</div>
+<% else %>
+<div class="row dashboard_index">
+  <div id="div_dashboard_index" class="col-sm-6 hidden-xs">
+    <div class="nodashboard">Nothing to display</div>
+  </div>
+  <div id="div_dashboard_show" class="col-xs-12 col-sm-6">
+  </div>
+</div>
+<% end %>
+</div>
