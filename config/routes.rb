@@ -20,7 +20,7 @@ Rails.application.routes.draw do
     resources :anniversarrys
     resources :achievements
     resources :hrs 
-    resources :wallboard
+    resources :wallboards
       
     get :admin_role
     resources :dashboards do
